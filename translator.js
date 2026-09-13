@@ -1,5 +1,5 @@
 let draconicDict = {};
-const DRACONIC_DICT_VERSION = "v3";
+const DRACONIC_DICT_VERSION = "v4";
 const DRACONIC_DICT_KEY = `draconicDict_${DRACONIC_DICT_VERSION}`;
 
 /* =========================
@@ -17,7 +17,7 @@ async function loadDictionary() {
     }
   }
 
-  const res = await fetch("https://cdn.jsdelivr.net/gh/lorna-e-o/draconic-dictionary/Draconic-Dictionary.json?v=3");
+  const res = await fetch("https://cdn.jsdelivr.net/gh/lorna-e-o/draconic-dictionary/Draconic-Dictionary.json?v=4");
   draconicDict = await res.json();
 
   localStorage.setItem(DRACONIC_DICT_KEY, JSON.stringify(draconicDict));
